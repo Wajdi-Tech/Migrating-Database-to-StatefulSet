@@ -23,8 +23,8 @@ pods-before.png → list of pods before deletion
 pods-after.png → list of pods after recreation
 
 
-![Pods before deletion](pods-before.png)
-![Pods after recreation](pods-after.png)
+![Pods before deletion](docs/pods-before.png)
+![Pods after recreation](docs/pods-after.png)
 💾 2. PVC Auto-Creation
 📄 Description
 Show that PVCs are automatically created per StatefulSet replica.
@@ -36,7 +36,7 @@ kubectl get pvc
 pvc-list.png → displays automatically created PVCs
 
 
-![PVC Auto-Creation](pvc-list.png)
+![PVC Auto-Creation](docs/pvc-list.png)
 🌐 3. Stable DNS Entry Test
 📄 Description
 Confirm that each StatefulSet pod can be accessed via a stable DNS name.
@@ -48,7 +48,7 @@ kubectl run dns-test --rm -it --image=busybox --restart=Never -- nslookup postgr
 nslookup.png → shows DNS lookup result
 
 
-![Stable DNS Lookup](nslookup.png)
+![Stable DNS Lookup](docs/nslookup.png)
 🗃️ 4. Data Persistence Verification
 📄 Description
 Insert data into PostgreSQL, delete the pod, and confirm that the data still exists after recreation.
@@ -68,8 +68,8 @@ db-before.png → before deletion
 db-after.png → after deletion (data persists)
 
 
-![Data before deletion](db-before.png)
-![Data after recreation](db-after.png)
+![Data before deletion](docs/db-before.png)
+![Data after recreation](docs/db-after.png)
 ⚙️ 5. Scaling Behavior
 📄 Description
 Demonstrate how scaling up the StatefulSet creates new pods and PVCs in order.
@@ -84,8 +84,8 @@ scale-pods.png → sequential creation of pods (postgres-0, postgres-1, postgres
 
 scale-pvcs.png → new PVCs created (postgres-data-postgres-1, etc.)
 
-![Scaling Pods](scale-pods.png)
-![Scaling PVCs](scale-pvcs.png)
+![Scaling Pods](docs/scale-pods.png)
+![Scaling PVCs](docs/scale-pvcs.png)
 📊 6. Summary Table
 Test	Description	Result
 Pod Naming Stability	Pod keeps same name after restart	✅
